@@ -1,0 +1,45 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}'>
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <style>
+  {% capture include_to_scssify %}
+  {% if site.blog-theme == "light" %}
+    {% include color-scheme/scheme-light.scss %}
+    {% include main.scss %}
+  {% elsif site.blog-theme == "dark" %}
+    {% include color-scheme/scheme-dark.scss %}
+    {% include main.scss %}
+  {% else %}
+    {% include color-scheme/scheme-light.scss %}
+    {% include main.scss %}
+  {% endif %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+  </style>
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#000000">
+  <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+</head>

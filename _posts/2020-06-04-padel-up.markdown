@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Padel Up"
+date: 2020-06-04
+description:
+image: /images/padelup-01.jpg
+author: Simone Precicchiani
+tags:
+  - Logo
+  - Branding
+  - Graphic Design
+---
+
+Startups need a strong visual identity to enter and spread in the market. The design language choosen is fresh and childish to bring joy and emotions to final customers.
+
+![Placeholder](/images/padelup-02.png)
+
+![Placeholder](/images/padelup-03.jpg)
+
+![Placeholder](/images/padelup-04.jpg)
